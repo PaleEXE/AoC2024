@@ -21,10 +21,11 @@ pub fn run(input: String) {
     println!("{}", rizz)
 }
 
-fn approve(result: u128, nums: &[u128], num: u128, index: usize) -> bool {
-    if index == nums.len() && num == result { return true }
-    if index == nums.len() { return false }
+fn approve(result: u128, nums: &[u128], current: u128, index: usize) -> bool {
+    if index == nums.len() {
+        return current == result;
+    }
 
-    approve(result, nums, nums[index] * num.max(1), index + 1)
-    || approve(result, nums, nums[index] + num, index + 1)
+    approve(result, nums, nums[index] * current.max(1), index + 1)
+    || approve(result, nums, nums[index] + current, index + 1)
 }
