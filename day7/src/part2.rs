@@ -11,13 +11,11 @@ pub fn run(input: String) {
                 .map(|num| num.parse::<u128>().unwrap())
                 .collect::<Vec<_>>();
             (result, nums)
-        })
-        .collect::<Vec<_>>();
+        });
 
     let rizz: u128 = equations
-        .iter()
         .filter(|(result, nums)| approve(*result, nums, 0, 0))
-        .map(|(result, _)| *result)
+        .map(|(result, _)| result)
         .sum();
 
     println!("{}", rizz);
