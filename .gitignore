@@ -1,0 +1,76 @@
+# ================================
+# Python
+# ================================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+
+# Environment variables
+.env
+*.env
+
+# Logs and debug files
+logs/
+*.log
+debug.log
+nohup.out
+
+# Cache
+*.cache
+*.pyc
+*.pyo
+
+# Editor & IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# ================================
+# OS generated files
+# ================================
+.DS_Store
+Thumbs.db
+
+# ================================
+# Rust
+# ================================
+# Target directory
+target/
+**/target/
+
+# Build artifacts
+*.rs.bk
+*.rlib
+*.d
+*.so
+*.dylib
+*.exe
+*.out
+*.a
+
+# Cargo
+/.cargo/
+cargo-cache/
+Cargo.lock  # (optional, remove this line if you want to track it)
+
+# ================================
+# Makefiles
+# ================================
+Makefile
+**/Makefile
+*.mk
+**/*.mk
+
+# ================================
+# Exceptions
+# ================================
+# Keep JSON files tracked
+!*.json
